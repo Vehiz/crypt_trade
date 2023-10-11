@@ -2,7 +2,9 @@ import './App.css'
 import Navbar from './Components/Navbar'
 import Hero from './Components/Hero'
 import Hero1 from './Components/Hero1'
-import TradingViewWidget from './Components/Widgets'
+import Footer from './Components/Footer'
+// import MarketWidgets from './Widgets/MarketWidgets'
+import TradingViewWidget from './Widgets/Widgets'
 
 function App() {
  
@@ -13,6 +15,8 @@ function App() {
       <Navbar/>
       <Hero/>
       <Hero1/>
+      {/* <MarketWidgets/> */}
+      <Footer/>
     </div>
   )
 }
