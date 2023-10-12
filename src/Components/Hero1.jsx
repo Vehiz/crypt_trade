@@ -5,8 +5,8 @@ import { AiOutlineLock } from "react-icons/ai";
 
 const Hero1 = () => {
   return (
-    <section className="w-screen py-[120px] overflow-hidden">
-      <div className=" w-screen flex flex-col justify-center items-center px-[1%]">
+    <section className="w-screen py-[120px] flex justify-center items-center overflow-hidden">
+      <div className=" w-[95%] flex flex-col justify-center items-center px-[1%]">
         <div className="w-[66%] text-center leading-[65px] mx-[70px] font-semibold text-[60px] mb-[50px]">
           <h2 className="">
             The best crypto features you wont find anywhere else
