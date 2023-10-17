@@ -13,7 +13,7 @@ const Hero1 = () => {
           </h2>
         </div>
         <div className="flex">
-        <div className="px-[15px]">
+        <div className="px-[15px] shadow-lg">
             <div className="p-[40px] mt-[30px]">
               <div className=" flex bg-[#EF2468] w-[70px] h-[70px] text-[white] text-[36px] text-center mb-[20px] justify-center items-center rounded-[50%]">
                 <BsBarChartLineFill />
@@ -25,8 +25,8 @@ const Hero1 = () => {
               </p>
             </div>
           </div>
-          <div className="px-[15px]">
-            <div className="p-[40px] mt-[30px]">
+          <div className="px-[15px] shadow-lg">
+            <div className="p-[40px] mt-[30px] shadow-sm">
               <div className=" flex bg-[#32C072] w-[70px] h-[70px] text-[white] text-[36px] text-center mb-[20px] justify-center items-center rounded-[50%]">
                 <BsSend />
               </div>
@@ -37,7 +37,7 @@ const Hero1 = () => {
               </p>
             </div>
           </div>
-          <div className="px-[15px]">
+          <div className="px-[15px] shadow-lg">
             <div className="p-[40px] mt-[30px]">
               <div className=" flex bg-[#FFD44B] w-[70px] h-[70px] text-[white] text-[36px] text-center mb-[20px] justify-center items-center rounded-[50%] ">
                 <AiOutlineLock />
