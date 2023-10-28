@@ -12,7 +12,7 @@ const AccordionItem2 = ({ open, toggle, title, desc }) => {
                         <div className='text-[#1E1E1E] text-[20px] font-semibold'>{open ? <AiOutlineMinus/> : <AiOutlinePlus/>}</div>
                 </div>
                 <Collapse isOpened={open}>
-                        <div className='bg-white py-[25px] px-[50px]'>{desc}</div>
+                        <div className='bg-white py-[20px] px-[50px]'>{desc}</div>
                 </Collapse>
         </div>
     )

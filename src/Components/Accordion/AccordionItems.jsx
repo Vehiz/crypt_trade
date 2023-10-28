@@ -13,20 +13,20 @@ const AccordionItems = () => {
   };
   const accordionData = [
     {
-      title: "What is Bitcoin?",
-      desc: "Bitcoin is a cryptocurrency invented in 2008 by an unknown person or group of people using the name Satoshi Nakamoto. The currency began use in 2009 when its implementation was released as open-source software.",
+      title: "Is it safe to invest in cryptocurrency?",
+      desc: "Cryptocurrency is a good investment if you want to gain direct exposure to the demand for digital currency.",
     },
     {
-      title: "What is Ethereum?",
-      desc: "Ethereum is a decentralized, open-source blockchain with smart contract functionality. Ether is the native cryptocurrency of the platform. After Bitcoin, it is the largest cryptocurrency by market capitalization. Ethereum is the most actively used blockchain.",
+      title: "When can i withdraw my investment returns?",
+      desc: "Investment proceeds can be withdrawn anytime, go to the withdrawal page of the portal to request withdrawal of funds. it's fast, safe and easy.",
     },
     {
-      title: "What is Litecoin?",
-      desc: "Litecoin is a peer-to-peer cryptocurrency and open-source software project released under the MIT/X11 license. Creation and transfer of coins is based on an open source cryptographic protocol and is not managed by any central authority.",
+      title: "Do i need a special advive to get the most out of this platform?",
+      desc: "No, any internet enabled device is good enough to access our trading platform and facilities worldwide.",
     },
   ];
   return (
-    <div className="bg-[#1A1AFF] grid place-items-center">
+    <div className="bg-[#1A1AFF] mt-[10%] grid place-items-center">
       <div className="px-[40px] max-w-[800px]">
         {accordionData.map((data, index) => {
           return (

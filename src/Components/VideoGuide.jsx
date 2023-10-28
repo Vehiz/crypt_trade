@@ -1,21 +1,28 @@
 // import React from "react";
 import video from "../assets/faq-video-bg.jpg";
-// import {FaAngleRight} from "react-icons/fa";
+import { BsCaretRightFill } from "react-icons/bs";
 import AccordionItems from "./Accordion/AccordionItems";
-
 
 const VideoGuide = () => {
   return (
     <section>
-      <div className="w-[100%] mx-auto">
+      <div className="w-[100%] bg-[#fff] mx-auto shadow-inner">
         <div className="flex py-[120px] justify-center items-center">
           <div className="pr-[48px] w-[45%] pl-[12px]">
-            <div className="w-[]">
+            <div className="bg-custom-background relative">
               <img
                 src={video}
                 alt=""
                 className="w-[100%] h-[100%] object-cover"
               />
+              <div className="flex w-[100px] h-[100px] rounded-[50%] bg-[#02021E] text-[25px] items-center justify-center text-[#F54748] absolute bottom-[40%] left-[45%]">
+                <a
+                  href="https://www.youtube.com/watch?v=jUXQCnUSfCQ"
+                  className=""
+                >
+                  <BsCaretRightFill />
+                </a>
+              </div>
             </div>
           </div>
 
@@ -26,9 +33,16 @@ const VideoGuide = () => {
               </div>
             </div>
             <div>
-              <AccordionItems/>
+              <AccordionItems />
             </div>
-            <div></div>
+            <div className="text-[#617686] mt-[24px]">
+              <h2>
+                Have more questions?
+                <span className="font-bold text-[18px] ml-[5px] text-[#1A1AFF]">
+                  Get in touch
+                </span>
+              </h2>
+            </div>
           </div>
         </div>
       </div>

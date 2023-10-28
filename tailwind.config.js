@@ -4,15 +4,16 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
-    extend: {
-      boxShadow: {
-        'custom':'4px 4px 6px 0 rgba(0,0,0,0.1',
-      },
-      borderWidth: {
-        '3': '3px',
-        '4': '4px',
-      },
+  extend: {
+    boxShadow: {
+      'custom':'4px 4px 6px 0 rgba(0,0,0,0.1',
+    },
+    borderWidth: {
+      '3': '3px',
+      '4': '4px',
+    },
+    backgroundImage: {
+      'custom-background': "url('src/assets/faq-video-bg.jpg')",
     },
   },
   plugins: [],

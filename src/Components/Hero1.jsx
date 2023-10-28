@@ -26,7 +26,7 @@ const Hero1 = () => {
             </div>
           </div>
           <div className="px-[15px] shadow-inner">
-            <div className="p-[40px] mt-[30px] shadow-sm">
+            <div className="p-[40px] mt-[30px]">
               <div className=" flex bg-[#32C072] w-[70px] h-[70px] text-[white] text-[36px] text-center mb-[20px] justify-center items-center rounded-[50%]">
                 <BsSend />
               </div>
