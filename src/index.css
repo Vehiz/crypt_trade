@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.ReactCollapse--collapse {
+  transition: height 500ms;
+}
+/* #3d3db9-bg-alt */
 /* :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

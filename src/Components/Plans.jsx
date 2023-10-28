@@ -76,19 +76,19 @@ const Plans = () => {
                 <div className="mt-[30px] border-t-2 border-gray-600">
                 <div className="flex flex-col gap-[20px] mt-[20px]">
                     <div className="flex gap-[8px]">
-                      <FaCheck className="text-blue-700"/>
+                      <FaCheck/>
                       Limited Access Library
                     </div>
                     <div className="flex gap-[8px]">
-                      <FaCheck className="text-blue-700"/>
+                      <FaCheck/>
                       Individual User Capabilities
                     </div>
                     <div className="flex gap-[8px]">
-                      <FaCheck className="text-blue-700"/>
+                      <FaCheck/>
                       No Updates Facility
                     </div>
                     <div className="flex gap-[8px]">
-                      <FaCheck className="text-blue-700"/>
+                      <FaCheck/>
                       Standard support
                     </div>
                   </div>

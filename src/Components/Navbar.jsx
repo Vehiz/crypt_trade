@@ -17,7 +17,7 @@ const Navbar = () => {
                     <a href="#" className="text-xl">Login</a>
                 </li>
             </ul>
-            <button className="bg-[red] px-[22px] py-[14px]">
+            <button className="bg-[#F54748] hover:bg-[#FFF] hover:text-[black] rounded px-[22px] py-[14px]">
                 <a>Get Started</a>
             </button>
         </div>
