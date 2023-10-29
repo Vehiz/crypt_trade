@@ -6,7 +6,7 @@ import AccordionItems from "./Accordion/AccordionItems";
 const VideoGuide = () => {
   return (
     <section>
-      <div className="w-[100%] px-[30px] bg-[#fff] mx-auto shadow-inner">
+      <div className="w-[100%] px-[30px] bg-[#02021E] mx-auto shadow-inner">
         <div className="flex py-[120px] justify-center items-center">
           <div className="pr-[48px] w-[45%] pl-[12px]">
             <div className="bg-custom-background relative">
@@ -28,7 +28,7 @@ const VideoGuide = () => {
 
           <div className="w-[45%]">
             <div>
-              <div className="text-[60px] leading-[112%] pr-[48px] pl-[12px] font-bold">
+              <div className="text-[60px] text-[#fff] leading-[112%] pr-[48px] pl-[12px] font-bold">
                 <h2>If you want to know anything, ask us</h2>
               </div>
             </div>

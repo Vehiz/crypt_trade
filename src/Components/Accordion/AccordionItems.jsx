@@ -26,7 +26,7 @@ const AccordionItems = () => {
     },
   ];
   return (
-    <div className="bg-[#1A1AFF] mt-[10%] grid place-items-center">
+    <div className="bg-[#1A1AFF] mt-[5%] grid place-items-center">
       <div className="px-[40px] max-w-[800px]">
         {accordionData.map((data, index) => {
           return (
