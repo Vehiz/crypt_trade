@@ -6,7 +6,7 @@ import AccordionItems from "./Accordion/AccordionItems";
 const VideoGuide = () => {
   return (
     <section>
-      <div className="w-[100%] bg-[#fff] mx-auto shadow-inner">
+      <div className="w-[100%] px-[30px] bg-[#fff] mx-auto shadow-inner">
         <div className="flex py-[120px] justify-center items-center">
           <div className="pr-[48px] w-[45%] pl-[12px]">
             <div className="bg-custom-background relative">

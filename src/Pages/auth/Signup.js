@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 
 const Signup = () => {
   return (
@@ -6,7 +6,7 @@ const Signup = () => {
         <div>
             <label>First Name</label>
             <input type="text" name="firstName" placeholder="First Name" />
-            
+
         </div>
 
     </form>

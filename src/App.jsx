@@ -7,6 +7,7 @@ import Plans from './Components/Plans'
 // import MarketWidgets from './Widgets/MarketWidgets'
 import TradingViewWidget from './Widgets/Widgets'
 import VideoGuide from './Components/VideoGuide'
+import Sliderr from './Components/Sliderr'
 
 function App() {
  
@@ -20,6 +21,7 @@ function App() {
       <Plans/>
       <VideoGuide/>
       {/* <MarketWidgets/> */}
+      <Sliderr/>
       <Footer/>
     </div>
   )
