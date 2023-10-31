@@ -1,30 +1,41 @@
-import './App.css'
-import Navbar from './Components/Navbar'
-import Hero from './Components/Hero'
-import Hero1 from './Components/Hero1'
-import Footer from './Components/Footer'
-import Plans from './Components/Plans'
-// import MarketWidgets from './Widgets/MarketWidgets'
-import TradingViewWidget from './Widgets/Widgets'
-import VideoGuide from './Components/VideoGuide'
-import Sliderr from './Components/Sliderr'
+import "./App.css";
+import { QueryClientProvider, QueryClient } from "react-query";
+import { Toaster } from "react-hot-toast";
+import LandingPage from "./Pages/LandingPage/LandingPage";
+import Signup from "./Pages/auth/Signup";
 
+const queryClient = new QueryClient(
+  {
+    defaultOptions: {
+      queries: {
+        refetchOnWindowFocus: false,
+        retry: false,
+      },
+      mutations: {
+        retry: false,
+      },
+    },
+  },
+);
+
+const toastOptions = {
+  style: {
+    position: 'top-right',
+    duration: 1000,
+    borderRadius: "10px",
+    background: "#333",
+    color: "#fff",
+    fontSize: "14px",
+  },
+};
 function App() {
- 
-
   return (
-    <div>
-      <TradingViewWidget/>
-      <Navbar/>
-      <Hero/>
-      <Hero1/>
-      <Plans/>
-      <VideoGuide/>
-      {/* <MarketWidgets/> */}
-      <Sliderr/>
-      <Footer/>
-    </div>
-  )
+    <QueryClientProvider client={queryClient}>
+      {/* <LandingPage /> */}
+      <Signup />
+      <Toaster toastOptions={toastOptions}/>
+    </QueryClientProvider>
+  );
 }
 
-export default App
+export default App;

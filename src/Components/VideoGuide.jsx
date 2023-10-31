@@ -38,7 +38,7 @@ const VideoGuide = () => {
             <div className="text-[#617686] mt-[24px]">
               <h2>
                 Have more questions?
-                <span className="font-bold text-[18px] ml-[5px] text-[#1A1AFF]">
+                <span className="font-bold text-[18px] ml-[5px] text-[#FFF]">
                   Get in touch
                 </span>
               </h2>
