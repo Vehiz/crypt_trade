@@ -14,6 +14,7 @@ export default {
     },
     backgroundImage: {
       'custom-background': "url('src/assets/faq-video-bg.jpg')",
+      'custom-background-2': "url('src/assets/bg-img2.jpeg')",
     },
   },
   plugins: [],

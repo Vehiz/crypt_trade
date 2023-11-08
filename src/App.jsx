@@ -3,6 +3,7 @@ import { QueryClientProvider, QueryClient } from "react-query";
 import { Toaster } from "react-hot-toast";
 import LandingPage from "./Pages/LandingPage/LandingPage";
 import Signup from "./Pages/auth/Signup";
+import Login from "./Pages/auth/Login";
 
 const queryClient = new QueryClient(
   {
@@ -32,7 +33,8 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       {/* <LandingPage /> */}
-      <Signup />
+      <Login />
+      {/* <Signup /> */}
       <Toaster toastOptions={toastOptions}/>
     </QueryClientProvider>
   );
