@@ -2,9 +2,12 @@ import { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
+
+
 const handlePhoneNumber = (e) => {
   const { phoneNumber, setPhoneNumber } = useState("");
   const { valid, setValid } = useState(false);
+  
 
   setPhoneNumber(e.target.value);
   if (phoneNumber.length === 11) {
@@ -41,6 +44,11 @@ const validationSchema = Yup.object({
 });
 
 const Signup = () => {
+    const [isChecked, setIsChecked] = useState(false);
+
+    const handleCheckbox = () => {
+        setIsChecked(!isChecked);
+    };
   return (
     <section className="flex flec-col mt-[40px] items-center justify-center">
       <div className="flex bg-gradient-to-br bg-custom-background-2 from-blue-600 via-blue-700 to-blue-900 bg-opacity-80 w-[55%] rounded-md items-center gap-[20px] justify-center ">
@@ -122,6 +130,9 @@ const Signup = () => {
               <Field
                 className="mt-1"
                 type="checkbox"
+                checked={isChecked}
+                onChange={handleCheckbox}
+                id="termsAndConditions"
                 name="termsAndConditions"
               />
               <label htmlFor="termsAndConditions">

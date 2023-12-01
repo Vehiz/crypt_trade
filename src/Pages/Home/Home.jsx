@@ -8,7 +8,7 @@ import Plans from '../../Components/Plans'
 import Sliderr from '../../Components/Sliderr'
 import VideoGuide from '../../Components/VideoGuide'
 
-const LandingPage = () => {
+const Home = () => {
   return (
     <section>
         <TradingViewWidget />
@@ -23,4 +23,4 @@ const LandingPage = () => {
   )
 }
 
-export default LandingPage
+export default Home

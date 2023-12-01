@@ -1,8 +1,13 @@
 import { Formik } from "formik";
 import { Form, Field, ErrorMessage } from "formik";
-import React from "react";
+import { useState } from "react";
 
 const Login = () => {
+  const { rememberMe, setRememberMe } = useState(false);
+
+  const handleCheckbox = () => {
+    setRememberMe(!rememberMe);
+  };
   return (
     <section className="flex flec-col mt-[50px] items-center justify-center">
       <div className="flex bg-gradient-to-br bg-custom-background-2 from-blue-600 via-blue-700 to-blue-900 bg-opacity-80 w-[55%] rounded-md items-center gap-[20px] justify-center ">
@@ -39,16 +44,17 @@ const Login = () => {
                 />
                 <ErrorMessage name="password" />
               </div>
-              <div className="mb-4 flex gap-[15px]">
+              <div className="mb-4 flex gap-[8px]">
                 <Field
-                    type="checkbox"
-                    className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="rememberMe"
-                    name="rememberMe"
-                    />
-                    <label htmlFor="rememberMe">Remember Me</label>
-                    <ErrorMessage name="rememberMe" />
-                    </div>
+                  type="checkbox"
+                  checked={rememberMe}
+                  onChange={handleCheckbox}
+                  id="rememberMe"
+                  name="rememberMe"
+                />
+                <label htmlFor="rememberMe">Remember Me</label>
+                <ErrorMessage name="rememberMe" />
+              </div>
             </div>
             <div className="flex flex-col gap-[15px] mt-[15px] items-center justify-between">
               <button
@@ -62,14 +68,14 @@ const Login = () => {
                   Forgot Password?
                 </a>
               </div>
-            <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center">
                 <p className="text-[14px]">
-                    Don&rsquo;t have account ?{" "}
-                    <a href="#" className="text-blue-500 hover:text-blue-700">
-                        Register
-                    </a>
+                  Don&rsquo;t have account ?{" "}
+                  <a href="#" className="text-blue-500 hover:text-blue-700">
+                    Register
+                  </a>
                 </p>
-            </div>
+              </div>
             </div>
           </Form>
         </Formik>
