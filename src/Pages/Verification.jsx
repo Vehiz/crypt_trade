@@ -11,7 +11,7 @@ const Verification = () => {
               <h4>Verification Status</h4>
             </div>
             <div className="p-[30px] grid gap-[12px]">
-              <div className="bg-[red] w-[100px] rounded-3xl p-[8px] text-[#fff]">
+              <div className="bg-[red] text-[12px] w-[90px] rounded-3xl p-[8px] text-[#fff]">
                 <strong>Not verified</strong>
               </div>
               <p>
