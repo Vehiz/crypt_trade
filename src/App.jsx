@@ -9,6 +9,7 @@ import Deposit from "./Pages/Account/Deposit/Deposit"
 import { Route, Routes } from "react-router-dom";
 import Sidebar from "./Pages/Account/Sidebar/Sidebar";
 import Verification from "./Pages/Verification";
+import Profile from "./Pages/Profile"
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -45,6 +46,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/deposit" element={<Deposit/>} />
           <Route path="/verification" element={<Verification/>} />
+          <Route path="/profile" element={<Profile/>} />
         </Route>
 
         {/* Private Routes */}
