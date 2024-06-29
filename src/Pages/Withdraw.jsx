@@ -16,6 +16,7 @@ const Withdraw = () => {
   const [selectedWithdrawal, setSelectedWithdrawal] = useState(null);
   const [amount, setAmount] = useState("");
   const [walletAddress, setWalletAddress] = useState("");
+  const [action, setAction] = useState("Pending");
 
   useEffect(() => {
     // Simulate a loading delay
@@ -64,6 +65,7 @@ const Withdraw = () => {
       asset: selectedAsset,
       amount: `${amount} ${selectedAsset}`,
       status: "Pending",
+      action: "Your withdrawals is being processed, this may take 2-3 working days",
       walletAddress,
       user: user.email
     };
@@ -199,6 +201,19 @@ const Withdraw = () => {
                       />
                     </div>
                   </div>
+                  <div className="hidden flex-wrap justify-between font-bold">
+                    <label>Action</label>
+                    <div className="w-full lg:w-5/6 mt-2.5 lg:mt-0">
+                      <input
+                        className="w-full border rounded px-4 py-2"
+                        name="action"
+                        type="text"
+                        placeholder="pending"
+                        value={action}
+                        onChange={(e) => setAction(e.target.value)}
+                      />
+                    </div>
+                  </div>
                   <button className="bg-[#3454f5] hover:bg-blue-700 text-base text-white px-6 py-2 rounded mt-5">
                     Submit
                   </button>
@@ -219,6 +234,7 @@ const Withdraw = () => {
                     <tr>
                       <th className="py-2 px-4 border-b">Asset</th>
                       <th className="py-2 px-4 border-b">Amount</th>
+                      <th className="py-2 px-4 border-b">Date</th>
                       <th className="py-2 px-4 border-b">Status</th>
                       <th className="py-2 px-4 border-b">Actions</th>
                     </tr>
@@ -229,6 +245,7 @@ const Withdraw = () => {
                         <tr key={withdrawal.id}>
                           <td className="py-2 px-4 border-b text-center">{withdrawal.asset}</td>
                           <td className="py-2 px-4 border-b text-center">{withdrawal.amount}</td>
+                          <td className="py-2 px-4 border-b text-center">{new Date().toISOString().split('T')[0]}</td>
                           <td className="py-2 px-4 border-b text-center">{withdrawal.status}</td>
                           <td className="py-2 px-4 border-b text-center">
                             <button
@@ -254,6 +271,7 @@ const Withdraw = () => {
             <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
               <div className="bg-white p-8 rounded-lg shadow-md">
                 <h4 className="text-2xl font-bold mb-4">Withdrawal Status</h4>
+                <p className="italic text-[24px]"><strong>Action:</strong>{selectedWithdrawal.action}</p>
                 <p><strong>Asset:</strong> {selectedWithdrawal.asset}</p>
                 <p><strong>Amount:</strong> {selectedWithdrawal.amount}</p>
                 <p><strong>Status:</strong> {selectedWithdrawal.status}</p>
