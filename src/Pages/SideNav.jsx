@@ -1,6 +1,6 @@
 import React from 'react'
 import { IoIosNotificationsOutline } from "react-icons/io"
-import Panda from "../../assets/panda.svg"
+// import Panda from "../../assets/panda.svg"
 
 const SideNav = () => {
   return (

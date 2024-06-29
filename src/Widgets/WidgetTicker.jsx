@@ -3,9 +3,9 @@ import  { useEffect } from 'react';
 const TradingViewWidget = () => {
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-tickers.js';
+    script.src =  'https://s3.tradingview.com/external-embedding/embed-widget-tickers.js';
     script.async = true;
-    script.innerHTML = JSON.stringify({
+    script.innerHTML =  JSON.stringify({
       symbols: [
         {
           proName: 'FOREXCOM:SPXUSD',
@@ -49,7 +49,7 @@ const TradingViewWidget = () => {
 
   return (
     <div className="tradingview-widget-container">
-      <div className="mx-[42px] tradingview-widget-container__widget"></div>
+      <div className="mx-[40px] tradingview-widget-container__widget"></div>
     </div>
   );
 };

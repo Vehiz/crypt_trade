@@ -7,34 +7,37 @@ const TradingViewWidget = () => {
       "https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js";
     script.async = true;
     script.innerHTML = JSON.stringify({
-        "colorTheme": "light",
-        "dateRange": "12M",
-        "showChart": true,
-        "locale": "en",
-        "largeChartUrl": "",
-        "isTransparent": false,
-        "showSymbolLogo": true,
-        "showFloatingTooltip": false,
-        "height": "700",
-        "borderRadius": "12px",
-      // ... (other configuration options)
+      colorTheme: "light",
+      dateRange: "12M",
+      showChart: true,
+      locale: "en",
+      largeChartUrl: "",
+      isTransparent: false,
+      showSymbolLogo: true,
+      showFloatingTooltip: false,
+      height: "700",
+      borderRadius: "12px",
+      // Other configuration options can be added here
     });
 
-    document
-      .getElementsByClassName("tradingview-widget-container__widget")[0]
-      .appendChild(script);
+    const container = document.querySelector(
+      ".tradingview-widget-container__widget"
+    );
+    if (container) {
+      container.appendChild(script);
+    }
 
     return () => {
-      document.getElementsByClassName(
-        "tradingview-widget-container__widget"
-      )[0].innerHTML = "";
+      if (container) {
+        container.innerHTML = "";
+      }
     };
   }, []);
 
   return (
-    <section className="">
-      <div className=" tradingview-widget-container">
-        <div className="mx-[42px] mb-[30px] rounded-2xl tradingview-widget-container__widget"></div> 
+    <section className="mx-4 mb-6 rounded-xl bg-white shadow-lg">
+      <div className="tradingview-widget-container">
+        <div className="tradingview-widget-container__widget"></div>
       </div>
     </section>
   );

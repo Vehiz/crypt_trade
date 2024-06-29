@@ -24,7 +24,7 @@ const AccordionItems = () => {
       desc: "Investment proceeds can be withdrawn anytime, go to the withdrawal page of the portal to request withdrawal of funds. it's fast, safe and easy.",
     },
     {
-      title: "Do i need a special advive to get the most out of this platform?",
+      title: "Do i need a special advice to get the most out of this platform?",
       desc: "No, any internet enabled device is good enough to access our trading platform and facilities worldwide.",
     },
   ];
@@ -36,7 +36,7 @@ const AccordionItems = () => {
           className="bg-white py-[25px] px-[50px] flex justify-between items-center cursor-pointer"
           onClick={toggle}
         >
-          <h2 className="text-[#1A1AFF] text-[20px] font-semibold">{title}</h2>
+          <h2 className="text-[blue] text-[20px] font-semibold">{title}</h2>
           <div className="text-[#1E1E1E] text-[20px] font-semibold">
             {open ? <AiOutlineMinus /> : <AiOutlinePlus />}
           </div>
@@ -56,7 +56,7 @@ const AccordionItems = () => {
   };
   
   return (
-    <div className="bg-[#1A1AFF] mt-[5%] grid place-items-center">
+    <div className="bg-[blue] mt-[5%] grid place-items-center">
       <div className="px-[40px] max-w-[800px]">
         {accordionData.map((data, index) => {
           return (

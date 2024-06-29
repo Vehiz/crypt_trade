@@ -1,28 +1,17 @@
-import React, { useState } from 'react';
+// import { useState } from 'react';
+import PropTypes from 'prop-types';
 
-const FileUpload = () => {
-  const [selectedFile, setSelectedFile] = useState(null);
-
-  const handleFileChange = (event) => {
-    setSelectedFile(event.target.files[0]);
-  };
-
-  const handleUpload = () => {
-    // You can perform any necessary logic here, such as sending the file to a server
-    if (selectedFile) {
-      console.log('Uploading file:', selectedFile);
-      // Add your upload logic here
-    } else {
-      console.log('No file selected');
-    }
-  };
-
+const FileUpload = ({handleFileChange}) => {
+  // const [preview, setPreview] = useState(null);
+   
   return (
-    <div>
-      <input type="file" onChange={handleFileChange} />
-      <button onClick={handleUpload}>Upload</button>
+    <div className='flex w-full h-[200px] justify-center rounded items-center bg-slate-300'>
+      <input  type="file" required onChange={handleFileChange} />
+      {/* {preview && <img src={preview} alt="Preview" className="w-[100px] h-[100px] rounded-full" />} */}
     </div>
   );
 };
-
+FileUpload.propTypes = {
+  handleFileChange: PropTypes.func.isRequired,
+};
 export default FileUpload;

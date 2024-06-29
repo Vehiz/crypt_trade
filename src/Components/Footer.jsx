@@ -1,63 +1,61 @@
 // import React from 'react'
-import {FaFacebookF} from 'react-icons/fa'
-import {FaTwitter} from 'react-icons/fa'
-import {FaInstagram} from 'react-icons/fa'
-import {FaLinkedinIn} from 'react-icons/fa'
+import { FaFacebookF } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
+
   return (
-    <footer className="bg-[#02021E] grid">
-      <div className="pt-[70px] pb-[100px]">
-        <div className="mr-auto ml-auto text-[#fff]">
-          <div className="flex items-center justify-around w-[100%]">
-            <div className="w-[18%] grid pt-[50px] gap-[20px] pl-[50px] ">
-              <h2 className='font-bold text-lg'>CryptTrade</h2>
-              <p className='pt-[0px] text-gray-500'>
-                Pixitrades remains the easiest, safest and fastest web app for
-                cryptocurrency trading, exchange and investments globally.
-              </p>
-            </div>
-            <div className="w-[15%] grid gap-[20px]">
-                <h2 className='font-bold'>Company</h2>
-                <ul className='grid gap-[10px] text-gray-500'>
-                    <li>Contact & support</li>
-                    <li>Setting & privacy</li>
-                    <li>News</li>
-                </ul>
-            </div>
-            <div className="w-[15%] grid gap-[20px]">
-                <h2 className='font-bold'>Products</h2>
-                <ul className='grid gap-[10px] text-gray-500'>
-                    <li>Exchange</li>
-                    <li>Investment</li>
-                    <li>Trading</li>
-                </ul>
-            </div>
-            <div className="w-[15%] grid gap-[20px]">
-                <h2 className='font-sans font-bold text-[]'>Resources</h2>
-                <ul className='grid gap-[10px] text-gray-500'>
-                    <li>Blog</li>
-                    <li>FAQ</li>
-                    <li>Terms & conditions</li>
-                </ul>
-            </div>
-          </div>
+    <footer className="bg-[#02021E] text-gray-500">
+  <div className="container mx-auto py-12 px-6 md:px-12 lg:px-24">
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="space-y-4">
+        <h2 className="font-bold text-lg text-white">Bitmine</h2>
+        <p>
+          Bitmine remains the easiest, safest and fastest web app for
+          cryptocurrency trading, exchange and investments globally.
+        </p>
+      </div>
+      <div className="space-y-4">
+        <h2 className="font-bold text-white">Company</h2>
+        <ul className="space-y-2">
+          <li><a href="#" className="hover:text-gray-300">Contact & support</a></li>
+          <li><a href="#" className="hover:text-gray-300">Setting & privacy</a></li>
+          <li><a href="#" className="hover:text-gray-300">News</a></li>
+        </ul>
+      </div>
+      <div className="space-y-4">
+        <h2 className="font-bold text-white">Products</h2>
+        <ul className="space-y-2">
+          <li><a href="#" className="hover:text-gray-300">Exchange</a></li>
+          <li><a href="#" className="hover:text-gray-300">Investment</a></li>
+          <li><a href="#" className="hover:text-gray-300">Trading</a></li>
+        </ul>
+      </div>
+      <div className="space-y-4">
+        <h2 className="font-bold text-white">Resources</h2>
+        <ul className="space-y-2">
+          <li><a href="#" className="hover:text-gray-300">Blog</a></li>
+          <li><a href="#" className="hover:text-gray-300">FAQ</a></li>
+          <li><a href="#" className="hover:text-gray-300">Terms & conditions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div className="border-t border-gray-600 mt-12 pt-8">
+      <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+        <p>©{new Date().getFullYear()} Bitmine. All rights reserved</p>
+        <div className="flex space-x-4 mt-4 md:mt-0">
+          <a href="#" className="hover:text-gray-300"><FaFacebookF /></a>
+          <a href="#" className="hover:text-gray-300"><FaTwitter /></a>
+          <a href="#" className="hover:text-gray-300"><FaInstagram /></a>
+          <a href="#" className="hover:text-gray-300"><FaLinkedinIn /></a>
         </div>
       </div>
-      <div className='flex justify-center'>
-      <div className="flex w-[83.5%] items-center border-t-2 border-gray-600 justify-between  py-[35px] pb-[40px] text-[#fff]">
-        <div className="flex items-center">
-            <p>© 2023 CryptTrade. All rights reserved</p>
-        </div>
-        <div className="flex gap-[20px] items-end">
-                <a><FaFacebookF/></a>
-                <a><FaTwitter/></a>
-                <a><FaInstagram/></a>
-                <a><FaLinkedinIn/></a>
-        </div>
-      </div>
-      </div>
-    </footer>
+    </div>
+  </div>
+</footer>
+
   );
 };
 

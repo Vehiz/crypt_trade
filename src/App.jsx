@@ -1,58 +1,114 @@
-import "./App.css";
-import { QueryClientProvider, QueryClient } from "react-query";
-import { Toaster } from "react-hot-toast";
-import Home from "./Pages/Home/Home";
-import Signup from "./Pages/auth/Signup";
-import Login from "./Pages/auth/Login";
-import Dashboard from "./Pages/Account/Dashboard/Dashboard";
-import Deposit from "./Pages/Account/Deposit/Deposit"
-import { Route, Routes } from "react-router-dom";
-import Sidebar from "./Pages/Account/Sidebar/Sidebar";
-import Verification from "./Pages/Verification";
-import Profile from "./Pages/Profile"
+import "./index.css";
+import { ToastContainer} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import {
+  HomeLayout,
+  Home,
+  Signup,
+  Login,
+  Dashboard,
+  Deposit,
+  Error,
+  About,
+  Contact,
+  Verification,
+  Profile,
+  Withdraw,
+  Transactions,
+} from "./Pages/";
+import ForgotPassword from "./Components/forgotPassword";
+import PreLoader from "./Components/PreLoader";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Account from "./Components/Account";
+// import PreLoader from "./Components/PreLoader";
 
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      refetchOnWindowFocus: false,
-      retry: false,
-    },
-    mutations: {
-      retry: false,
-    },
-  },
-});
 
-const toastOptions = {
-  style: {
-    position: "top-right",
-    duration: 1000,
-    borderRadius: "10px",
-    background: "#333",
-    color: "#fff",
-    fontSize: "14px",
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomeLayout />,
+    errorElement: <Error />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "signup",
+        element: <Signup />,
+      },
+      {
+        path: "deposit",
+        element: <Deposit />,
+      },
+      {
+        path: "preloader",
+        element: <PreLoader />,
+      },
+      {
+        path: "forgotpassword",
+        element: <ForgotPassword/>
+      },
+      {
+        path: "account",
+        element: <Account />,
+        errorElement: <Error />,
+        children: [
+          {
+            path: "dashboard",
+            element: <Dashboard />,
+          },
+          {
+            path: "deposit",
+            element: <Deposit />,
+          },
+          {
+            path: "verification",
+            element: <Verification />,
+          },
+          {
+            path: "profile",
+            element: <Profile />,
+          },
+          {
+            path: "withdraw",
+            element: <Withdraw />,
+          },
+          {
+            path: "transactions",
+            element: <Transactions />,
+          },        
+        ],
+      },
+    ],
   },
-};
+]);
 function App() {
   return (
-    <main>
-      <Routes>
-        {/* Public Routes */}
-        <Route>
-          <Route path="/" element={<Home />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/sidebar" element={<Sidebar/>}/>
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/deposit" element={<Deposit/>} />
-          <Route path="/verification" element={<Verification/>} />
-          <Route path="/profile" element={<Profile/>} />
-        </Route>
-
-        {/* Private Routes */}
-
-      </Routes>
-    </main>
+    <>
+      <ToastContainer position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover/>
+      <RouterProvider router={router} />;
+    </>
   );
 }
 

@@ -4,138 +4,141 @@ import { FaCheck } from "react-icons/fa";
 
 const Plans = () => {
   return (
-    <section className="py-[120px] shadow-inner">
-      <div className="grid gap-[40px]">
+    <section className="py-24 shadow-inner">
+      <div className="grid gap-10 md:gap-16">
         <div className="flex flex-col justify-center items-center">
-          <div className="w-[60%]">
-            <h2 className="text-center text-[#000] font-bold text-[60px] mb-[30px] leading-[4rem]">
+          <div className="w-11/12 md:w-3/4 lg:w-1/2">
+            <h2 className="text-center text-black font-bold text-4xl md:text-5xl lg:text-6xl mb-6 md:mb-8 leading-snug">
               The most affordable investment plan for you
             </h2>
-            <p className="text-gray-500 text-[1.2rem] text-center">
+            <p className="text-gray-500 text-lg md:text-xl text-center">
               Earn with ease using our investment plan
             </p>
           </div>
         </div>
-        <div className="flex justify-center items-center">
-          <div className="flex gap-[20px] justify-center items-center w-[100%] ">
-            <div className="w-[28%]">
-              <div className="px-[45px] py-[40px] mt-[30px] rounded-lg shadow-lg">
+        <div className="px-6 md:px-12 lg:px-24">
+          <div className="grid md:flex gap-6 justify-center items-center">
+            <div className="w-full md:w-1/2 lg:w-1/3">
+              <div className="px-6 py-8 border mt-6 rounded-lg shadow-lg">
                 <div>
-                  <div className="text-[20px] font-bold">
+                  <div className="text-xl font-bold">
                     <h4>Basic Plan</h4>
                   </div>
-                  <div className="flex items-end ">
-                    <h2 className="text-[72px] font-bold h-[4.5rem] leading-[115%]">
+                  <div className="flex items-end">
+                    <h2 className="text-5xl font-bold leading-tight">
                       $<span>500</span>
                     </h2>
-                    <p className="text-[20px] text-[#617686] leading-[28px] h-[rem]">
-                      Min
-                    </p>
+                    <p className="text-xl text-gray-500">Min</p>
                   </div>
                 </div>
-                <div className="mt-[30px] border-t-2 border-gray-600">
-                <div className="flex flex-col gap-[20px] mt-[20px]">
-                    <div className="flex gap-[8px]">
-                      <FaCheck className="text-blue-700"/>
+                <div className="mt-6 border-t-2 border-gray-600">
+                  <div className="flex flex-col gap-4 mt-4">
+                    <div className="flex gap-2">
+                      <FaCheck className="text-blue-700" />
                       Limited Access Library
                     </div>
-                    <div className="flex gap-[8px]">
-                      <FaCheck className="text-blue-700"/>
+                    <div className="flex gap-2">
+                      <FaCheck className="text-blue-700" />
                       Individual User Capabilities
                     </div>
-                    <div className="flex gap-[8px]">
-                      <FaCheck className="text-blue-700"/>
+                    <div className="flex gap-2">
+                      <FaCheck className="text-blue-700" />
                       No Updates Facility
                     </div>
-                    <div className="flex gap-[8px]">
-                      <FaCheck className="text-blue-700"/>
+                    <div className="flex gap-2">
+                      <FaCheck className="text-blue-700" />
                       Standard support
                     </div>
                   </div>
                 </div>
-                <div className="flex justify-center font-bold rounded border-2 transition duration-300 ease-in-out border-[#F54748] px-[45px] py-[15px] hover:bg-[blue] hover:text-[white] hover:border-transparent items-center px-[] mt-[45px]">
+                <a
+                  href="/signup"
+                  className="flex justify-center font-bold rounded border-2 transition duration-300 ease-in-out border-red-500 px-6 py-4 mt-8 hover:bg-blue-500 hover:text-white hover:border-transparent items-center"
+                >
                   <button>Choose plan</button>
-                </div>
+                </a>
               </div>
             </div>
-            <div className="w-[28%]">
-              <div className="px-[45px] py-[50px] mt-[30px] shadow-lg bg-black rounded-lg text-[#fff]">
+            <div className="w-full md:w-1/2 lg:w-1/3">
+              <div className="px-6 py-8 mt-6 shadow-lg bg-black rounded-lg text-white">
                 <div>
-                  <div className="text-[20px] font-bold">
+                  <div className="text-xl font-bold">
                     <h4>Classic Plan</h4>
                   </div>
-                  <div className="flex items-end ">
-                    <h2 className="text-[72px] font-bold text-[#fff] h-[4.5rem] leading-[115%]">
-                      $<span>4,500</span>
+                  <div className="flex items-end">
+                    <h2 className="text-5xl font-bold leading-tight">
+                      $<span>2,000</span>
                     </h2>
-                    <p className="text-[20px] text-[#617686] leading-[28px] h-[rem]">
-                      Min
-                    </p>
+                    <p className="text-xl text-gray-500">Min</p>
                   </div>
                 </div>
-                <div className="mt-[30px] border-t-2 border-gray-600">
-                <div className="flex flex-col gap-[20px] mt-[20px]">
-                    <div className="flex gap-[8px]">
-                      <FaCheck/>
+                <div className="mt-6 border-t-2 border-gray-600">
+                  <div className="flex flex-col gap-4 mt-4">
+                    <div className="flex gap-2">
+                      <FaCheck />
                       Limited Access Library
                     </div>
-                    <div className="flex gap-[8px]">
-                      <FaCheck/>
+                    <div className="flex gap-2">
+                      <FaCheck />
                       Individual User Capabilities
                     </div>
-                    <div className="flex gap-[8px]">
-                      <FaCheck/>
+                    <div className="flex gap-2">
+                      <FaCheck />
                       No Updates Facility
                     </div>
-                    <div className="flex gap-[8px]">
-                      <FaCheck/>
+                    <div className="flex gap-2">
+                      <FaCheck />
                       Standard support
                     </div>
                   </div>
                 </div>
-                <div className="flex bg-[#F54748] justify-center font-bold transition duration-300 ease-in-out rounded border-2 border-[#F54748] px-[45px] py-[15px] hover:bg-[blue] hover:text-[white] hover:border-transparent items-center px-[] mt-[45px]">
+                <a
+                  href="/signup"
+                  className="flex bg-red-500 justify-center font-bold transition duration-300 ease-in-out rounded border-2 border-red-500 px-6 py-4 mt-8 hover:bg-blue-500 hover:text-white hover:border-transparent items-center"
+                >
                   <button>Choose plan</button>
-                </div>
+                </a>
               </div>
             </div>
-            <div className="w-[28%]">
-              <div className="px-[45px] py-[40px] rounded-lg mt-[30px] shadow-lg">
+            <div className="w-full md:w-1/2 lg:w-1/3">
+              <div className="px-6 py-8 mt-6 rounded-lg shadow-lg">
                 <div className="">
-                  <div className="text-[20px] font-bold">
+                  <div className="text-xl font-bold">
                     <h4>Premium Plan</h4>
                   </div>
                   <div className="flex items-end">
-                    <h2 className="text-[72px] font-bold h-[4.5rem] leading-[115%]">
-                      $<span>12,000</span>
+                    <h2 className="text-5xl font-bold leading-tight">
+                      $<span>6,000</span>
                     </h2>
-                    <p className="text-[20px] text-[#617686] leading-[28px] h-[rem]">
-                      Min
-                    </p>
+                    <p className="text-xl text-gray-500">Min</p>
                   </div>
                 </div>
-                <div className="mt-[30px] border-t-2 border-gray-600">
-                  <div className="flex flex-col gap-[20px] mt-[20px]">
-                    <div className="flex gap-[8px]">
-                      <FaCheck className="text-blue-700"/>
+                <div className="mt-6 border-t-2 border-gray-600">
+                  <div className="flex flex-col gap-4 mt-4">
+                    <div className="flex gap-2">
+                      <FaCheck className="text-blue-700" />
                       Limited Access Library
                     </div>
-                    <div className="flex gap-[8px]">
-                      <FaCheck className="text-blue-700"/>
+                    <div className="flex gap-2">
+                      <FaCheck className="text-blue-700" />
                       Individual User Capabilities
                     </div>
-                    <div className="flex gap-[8px]">
-                      <FaCheck className="text-blue-700"/>
+                    <div className="flex gap-2">
+                      <FaCheck className="text-blue-700" />
                       No Updates Facility
                     </div>
-                    <div className="flex gap-[8px]">
-                      <FaCheck className="text-blue-700"/>
+                    <div className="flex gap-2">
+                      <FaCheck className="text-blue-700" />
                       Standard support
                     </div>
                   </div>
                 </div>
-                <div className="flex justify-center font-bold transition duration-300 ease-in-out rounded border-2 border-red-500 px-[45px] py-[15px] hover:bg-[blue] hover:text-[white] hover:border-transparent items-center px-[] mt-[45px]">
+                <a
+                  href="/signup"
+                  className="flex justify-center font-bold transition duration-300 ease-in-out rounded border-2 border-red-500 px-6 py-4 mt-8 hover:bg-blue-500 hover:text-white hover:border-transparent items-center"
+                >
                   <button>Choose plan</button>
-                </div>
+                </a>
               </div>
             </div>
           </div>

@@ -1,18 +1,23 @@
 import { useState, useRef } from "react";
 import { Collapse } from "react-collapse";
-import BTC from "../../../assets/BTC.svg";
-import Ethereum from "../../../assets/ETH.svg";
-import USDT from "../../../assets/USDT.svg";
+import BTC from "../assets/BTC.svg";
+import Ethereum from "../assets/ETH.svg";
+import USDT from "../assets/USDT.svg";
 import PropTypes from "prop-types";
 
 const Accordion = () => {
   const [open, setOpen] = useState(false);
-
+  const [copied, setCopied] = useState(false);
   const inputRef = useRef(null);
+
   const copyText = () => {
     if (inputRef.current) {
       inputRef.current.select();
       document.execCommand("copy");
+      setCopied(true);
+      setTimeout(() => {
+        setCopied(false);
+      } , 2000);
     }
   };
   const toggle = (index) => {
@@ -61,12 +66,13 @@ const Accordion = () => {
             </div>
 
             <button
-              className="bg-[#d66b15]  text-white px-[23px] py-[5px] rounded"
+              className="bg-[#d66b15] text-white px-[23px] py-[5px] rounded"
               onClick={copyText}
             >
               copy
             </button>
           </div>
+          {copied && <div className="text-green-500">Copied to clipboard!</div>}
         </Collapse>
       </div>
     );
